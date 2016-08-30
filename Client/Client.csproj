@@ -94,7 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\layout\shellController.js" />
+    <Content Include="app\Controllers\shellController.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -144,11 +144,11 @@
   <ItemGroup>
     <Content Include="app\Views\admin.html" />
     <Content Include="app\Controllers\adminController.js" />
-     <Content Include="app\Views\login.html" />
+    <Content Include="app\Views\login.html" />
     <Content Include="app\Controllers\loginController.js" />
-     <Content Include="app\Services\loginService.js" />
-       <Content Include="app\Services\userService.js" />
-     <Content Include="app\Services\authorizationService.js" />
+    <Content Include="app\Services\loginService.js" />
+    <Content Include="app\Services\userService.js" />
+    <Content Include="app\Services\authorizationService.js" />
     <Content Include="app\app.js" />
     <Content Include="app\common\bootstrap\bootstrap.dialog.js" />
     <Content Include="app\common\common.js" />
@@ -161,7 +161,6 @@
     <Content Include="app\Controllers\dashboardController.js" />
     <Content Include="app\layout\shell.html" />
     <Content Include="app\layout\sidebar.html" />
-    <Content Include="app\layout\sidebarController.js" />
     <Content Include="app\layout\topnav.html" />
     <Content Include="app\layout\widgetheader.html" />
     <Content Include="app\Services\datacontext.js" />

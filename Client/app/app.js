@@ -3,7 +3,6 @@
     var app = angular.module('app', [
         // Angular modules
         //'ngAnimate',        // animations
-        // 'ngRoute',         // routing
         'ui.router',          //routing
         'ngSanitize',       // sanitizes html bindings (ex: sidebar.js)
 
@@ -23,7 +22,7 @@
             serverpath: "http://localhost:3000"
         });
 
-    // Handle routing errors and success events
+    //TODO to be implemented: Handle routing errors and success events
   //  app.run(['$route', function ($route) {
         // Include $route to kick start the router.
  //   }]);
