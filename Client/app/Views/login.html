@@ -1,44 +1,37 @@
 <link href="../../content/loginStyle.css" rel="stylesheet" />
-<!--
-    you can substitue the span of reauth email for a input with the email and
-    include the remember me checkbox
-    -->
 <div class="container">
     <div class="card card-container">
-        <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-        <img id="profile-img" class="profile-img-card" ng-src="{{vm.userData.profileImg}}" />
+        <img id="profile-img" class="profile-img-card" ng-src="{{loginCtrl.userData.profileImg}}" />
         <p id="profile-name" class="profile-name-card"></p>
         <form class="form-signin">
-            <span ng-show="vm.isUserSavedInLocalSt()" ng-bind="vm.userData.email" id="reauth-email" class="reauth-email"></span>
-            <input ng-hide="vm.isUserSavedInLocalSt()" ng-model="vm.userData.email" type="email" id="inputEmail" class="form-control"
+            <span ng-show="loginCtrl.isUserSavedInLocalSt()" ng-bind="loginCtrl.userData.email" id="reauth-email" class="reauth-email"></span>
+            <input ng-hide="loginCtrl.isUserSavedInLocalSt()" ng-model="loginCtrl.userData.email" type="email" id="inputEmail" class="form-control"
                 placeholder="Email address" required autofocus>
-            <input ng-model="vm.userData.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <input ng-model="loginCtrl.userData.password" type="password" id="inputPassword" class="form-control" placeholder="Password"
+                required>
             <div id="remember" class="checkbox">
                 <label>
-                        <input  ng-model="vm.userData.isChecked" type="checkbox" value="remember-me"> 
+                        <input ng-model="loginCtrl.userData.isChecked" type="checkbox" value="remember-me"/> 
                         <em style="padding-left: 16px;"> I'm Awesome, Remember Me!</em>
-                    </label>
+                </label>
             </div>
-            <button ng-click="vm.login()" class="cust-btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
-            <!-- <button ng-click="vm.registerUser()" class="btn btn-lg btn-default btn-block " type="submit">Register!</button>-->
+            <button ng-click="loginCtrl.login()" class="cust-btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
         </form>
-        <!-- /form -->
-<!-- TODO need validation on Registration -->
-        <a href="#" ng-click="vm.registerUser()" type="submit" class="forgot-password">
+
+        <!-- TODO need validation on Registration -->
+        <a href="#" ng-click="loginCtrl.registerUser()" type="submit" class="forgot-password">
                 Register!
             </a>
         </br>
-        <a href="#" ng-click="vm.removeUserFromLocalStorage()">
+        <a href="#" ng-click="loginCtrl.removeUserFromLocalStorage()">
                 Not me! Sign in with another user.
             </a>
-        <div ng-show="vm.message" class="alert alert-danger" role="alert">
+        <div ng-show="loginCtrl.message" class="alert alert-danger" role="alert">
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> {{vm.message}}
+            <span class="sr-only">Error:</span> {{loginCtrl.message}}
         </div>
     </div>
     <!-- /card-container -->
 
 </div>
 <!-- /container -->
-
-<!--<script src="../../scripts/loginPageScript.js"></script>-->

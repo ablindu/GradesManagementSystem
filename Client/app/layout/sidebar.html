@@ -1,13 +1,14 @@
-﻿<div data-cc-sidebar data-ng-controller="sidebarController as vm">
+﻿<div data-cc-sidebar>
     <div class="sidebar-filler"></div>
     <div class="sidebar-dropdown"><a href="#">Menu</a></div>
     <div class="sidebar-inner">
-        <div class="sidebar-widget">
-        </div>
+        <div class="sidebar-widget"></div>
         <ul class="navi">
-            <li class="nlightblue fade-selection-animation" data-ng-class="vm.isCurrent(r)"
-                data-ng-repeat="r in vm.navRoutes">
-                <a href="#{{r.url}}" data-ng-bind-html="r.config.settings.content"></a>
+            <li ui-sref-active="current" class="nlightblue">
+                <a ui-sref="home">Home</a>
+            </li>
+            <li ui-sref-active="current" class="nlightblue">
+                <a ui-sref="admin"  >Admin</a>
             </li>
         </ul>
     </div>

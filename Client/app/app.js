@@ -3,7 +3,8 @@
     var app = angular.module('app', [
         // Angular modules
         //'ngAnimate',        // animations
-        'ngRoute',          // routing
+        // 'ngRoute',         // routing
+        'ui.router',          //routing
         'ngSanitize',       // sanitizes html bindings (ex: sidebar.js)
 
         //services modules
@@ -17,13 +18,13 @@
         // 3rd Party Modules
         'ui.bootstrap'      // ui-bootstrap (ex: carousel, pagination, dialog)
     ])
-    .constant("appSettings",
-       {
-           serverpath: "http://localhost:3000"
-       });
+        .constant("appSettings",
+        {
+            serverpath: "http://localhost:3000"
+        });
 
     // Handle routing errors and success events
-    app.run(['$route',  function ($route) {
-            // Include $route to kick start the router.
-        }]);
+  //  app.run(['$route', function ($route) {
+        // Include $route to kick start the router.
+ //   }]);
 })();

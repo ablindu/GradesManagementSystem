@@ -3,18 +3,17 @@
     angular
         .module("app")
         .controller("loginController",
-        ["$cookies", "userService", "loginService", "authorizationService", loginController]);
+        ["$cookies", "$state", "userService", "loginService", "authorizationService", loginController]);
 
-    function loginController($cookies, userService, loginService, authorizationService) {
+    function loginController($cookies, $state, userService, loginService, authorizationService) {
         var vm = this;
         if ($cookies.get('loginToken')) {
             userService.getProfile().isLoggedIn = true;
         }
         vm.isLoggedIn = function () {
-            // debugger;
             var loggedIn = userService.getProfile().isLoggedIn;
             //if token cookie exists, take it from there and authenticate, else FALSE
-            console.log('IS LOGGED IN? => ' + loggedIn);
+            //  console.log('IS LOGGED IN? => ' + loggedIn);
             return loggedIn;
         };
         vm.isUserSavedInLocalSt = function () {
@@ -64,12 +63,13 @@
                     vm.message = "";
                     vm.password = "";
                     userService.setProfile(onSuccessData.userName, onSuccessData.access_token);
-                    debugger;
+
                     if (vm.userData.isChecked) {
                         saveUserOnLocalStorage();
                     }
-                   
+
                     $cookies.put("loginToken", onSuccessData.access_token);
+                    $state.go('home');
                 },
                 function (errorResponse) {
                     vm.password = "";
@@ -82,17 +82,14 @@
         }
         vm.logout = function () {
             authorizationService.cleanTokenCookie();
-            //TODO delete this todo when implementation is ready @login
             if (!vm.userData.isChecked) {
                 vm.removeUserFromLocalStorage();
             }
-
-            //TODO not ready yet; implement stateRouting
-            // $state.go('login'); // go to login
+            $state.go('login');
         }
 
 
-        //used for remember user
+        //used for remembering user
         function supportsHTML5Storage() {
             try {
                 return 'localStorage' in window && window['localStorage'] !== null;
