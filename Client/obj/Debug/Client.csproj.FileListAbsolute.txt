@@ -1,0 +1,66 @@
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\ApplicationInsights.config
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\csc.exe
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\vbc.exe
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\VBCSCompiler.exe
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\HotTowel_Angular.dll.config
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\HotTowel_Angular.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\HotTowel_Angular.pdb
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.AI.Web.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.AI.Web.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\obj\Debug\HotTowel_Angular.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\obj\Debug\HotTowel_Angular.pdb
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\HotTowel_Angular\HotTowel_Angular\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\ApplicationInsights.config
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\csc.exe
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\vbc.exe
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\VBCSCompiler.exe
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\HotTowel_Angular.dll.config
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\HotTowel_Angular.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\HotTowel_Angular.pdb
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.AI.Web.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.AI.Web.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\obj\Debug\HotTowel_Angular.dll
+C:\Users\ablindu\Documents\Projects\Angulr&WebAPI\Grades Management System\Client\obj\Debug\HotTowel_Angular.pdb
