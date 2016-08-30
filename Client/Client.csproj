@@ -142,8 +142,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\admin\admin.html" />
-    <Content Include="app\admin\admin.js" />
+    <Content Include="app\Views\admin.html" />
+    <Content Include="app\Controllers\adminController.js" />
+     <Content Include="app\Views\login.html" />
+    <Content Include="app\Controllers\loginController.js" />
+     <Content Include="app\Services\loginService.js" />
+       <Content Include="app\Services\userService.js" />
+     <Content Include="app\Services\authorizationService.js" />
     <Content Include="app\app.js" />
     <Content Include="app\common\bootstrap\bootstrap.dialog.js" />
     <Content Include="app\common\common.js" />
@@ -152,15 +157,15 @@
     <Content Include="app\config.exceptionHandler.js" />
     <Content Include="app\config.js" />
     <Content Include="app\config.route.js" />
-    <Content Include="app\dashboard\dashboard.html" />
-    <Content Include="app\dashboard\dashboard.js" />
+    <Content Include="app\Views\dashboard.html" />
+    <Content Include="app\Controllers\dashboardController.js" />
     <Content Include="app\layout\shell.html" />
     <Content Include="app\layout\sidebar.html" />
-    <Content Include="app\layout\sidebar.js" />
+    <Content Include="app\layout\sidebarController.js" />
     <Content Include="app\layout\topnav.html" />
     <Content Include="app\layout\widgetheader.html" />
-    <Content Include="app\services\datacontext.js" />
-    <Content Include="app\services\directives.js" />
+    <Content Include="app\Services\datacontext.js" />
+    <Content Include="app\Services\directives.js" />
     <Content Include="Content\customtheme.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
