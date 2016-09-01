@@ -25,11 +25,5 @@
                     controllerAs: 'adminCtrl',
                     templateUrl: '../app/Views/admin.html'
                 });
-               /* .state('otherwise', {
-                    url: '/',
-                    controller: 'dashboardController',
-                    controllerAs: 'dashboardCtrl',
-                    templateUrl: '../app/Views/dashboard.html'
-                });*/
         }])
 })();

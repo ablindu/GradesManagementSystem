@@ -13,13 +13,16 @@
             description: 'System that manage laboratory grades and attendances of students.'
         };
         vm.messageCount = 0;
+        var date = new Date();
+        vm.dateNow = date.getDate()+' -'+ date.getMonth()+' -'+ date.getFullYear();
         vm.people = [];
+        vm.classes= [];
         vm.title = 'Dashboard';
 
         activate();
 
         function activate() {
-            var promises = [getMessageCount(), getPeople()];
+            var promises = [getMessageCount(), getPeople(), getClasses()];
             common.activateController(promises, "dashboardController")
                 .then(function () { log('Activated Dashboard View'); });
             //.then();
@@ -34,6 +37,11 @@
         function getPeople() {
             return datacontext.getPeople().then(function (data) {
                 return vm.people = data;
+            });
+        }
+         function getClasses() {
+            return datacontext.getClasses().then(function (data) {
+                return vm.classes = data;
             });
         }
     }

@@ -2,14 +2,15 @@
     'use strict';
 
     var controllerId = 'shellController';
-    angular.module('app').controller(controllerId,
-        ['$rootScope', 'common', 'config', 'userService', shellController]);
+    angular.module('app')
+        .controller(controllerId,
+        ['$rootScope','$state', 'common', 'config', 'userService', shellController]);
 
-    function shellController($rootScope, common, config, userService) {
+    function shellController($rootScope, $state, common, config, userService) {
         var vm = this;
         var logSuccess = common.logger.getLogFn(controllerId, 'success');
         var events = config.events;
-       
+
         vm.busyMessage = 'Please wait ...';
         vm.isBusy = true;
         vm.spinnerOptions = {
@@ -32,8 +33,15 @@
 
         function toggleSpinner(on) { vm.isBusy = on; }
 
+        $rootScope.$on('$stateChangeSuccess', function () {
+            if (userService.getProfile().isLoggedIn && $state.current.name === "login") {
+                $state.go('home');
+            }
+        });
+
         $rootScope.$on('$routeChangeStart',
             function (event, next, current) { toggleSpinner(true); }
+
         );
 
         $rootScope.$on(events.controllerActivateSuccess,

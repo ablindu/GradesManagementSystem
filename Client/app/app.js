@@ -23,7 +23,9 @@
         });
 
     //TODO to be implemented: Handle routing errors and success events
-  //  app.run(['$route', function ($route) {
-        // Include $route to kick start the router.
- //   }]);
+   /* app.run(['$rootScope', function ($rootScope) {
+         $rootScope.$on('$stateChangeSuccess', function ( ) {
+                alert("test");
+            });
+    }]);*/
 })();

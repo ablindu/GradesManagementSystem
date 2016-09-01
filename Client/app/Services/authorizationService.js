@@ -2,14 +2,19 @@
     "use strict";
     angular
         .module("app")
-        .factory("authorizationService", ["$cookies","userService",
-         authorizationService]);
+        .factory("authorizationService", ["$cookies", "userService",
+            authorizationService]);
 
     function authorizationService($cookies, userService) {
-        var cleanTokenCookie = function () {
-            $cookies.remove("loginToken");
-            userService.getProfile().isLoggedIn = false;
+        var cleanToken = function () {
+            localStorage.removeItem("PROFILE_TOKEN");
+        },
+            setToken = function (token) {
+                localStorage.setItem("PROFILE_TOKEN", token);
         }
-        return { cleanTokenCookie: cleanTokenCookie }
+        return {
+            cleanToken: cleanToken,
+            setToken: setToken
+        }
     };
 })();

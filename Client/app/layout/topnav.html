@@ -7,14 +7,18 @@
             <span class="icon-bar"></span>
         </a>
     </div>
-    <div class="navbar-collapse collapse">
+    <div ng-show="loginVM.currentUserData().isLoggedIn" class="navbar-collapse collapse">
         <div class="pull-right navbar-logo">
             <ul class="nav navbar-nav pull-right">
-               <!-- <li>
-                </li>-->
-                  <button ng-show="loginVM.isLoggedIn()" class="btn btn-primary" ng-click="loginVM.logout()">Logout</button>
-                
-              <!--  <li>
+              
+                <li>
+                    <h6 class="brand-title">Hello, {{loginVM.userData.userName}} </h6>
+                </li>
+                <li>
+                    <button class="btn btn-primary" ng-click="loginVM.logout()">Logout</button>
+                </li>
+
+                <!--  <li>
                     <a href="http://www.breezejs.com" target="_blank">
                         <img src="../../Content/images/breezelogo.png" />
                     </a>

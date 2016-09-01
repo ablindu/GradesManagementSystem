@@ -11,7 +11,7 @@
                 required>
             <div id="remember" class="checkbox">
                 <label>
-                        <input ng-model="loginCtrl.userData.isChecked" type="checkbox" value="remember-me"/> 
+                        <input id="rememberMe"  ng-click="loginCtrl.triggerRememberMeCheckbox()"  type="checkbox" /> <!--value="remember-me"-->
                         <em style="padding-left: 16px;"> I'm Awesome, Remember Me!</em>
                 </label>
             </div>

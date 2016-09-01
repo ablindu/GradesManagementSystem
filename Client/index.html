@@ -35,11 +35,11 @@
 
 <body data-ng-controller='loginController as loginCtrl'>
     <div>
-        <div ng-hide="loginCtrl.isLoggedIn()" data-ng-include="'app/Views/login.html'"></div>
+        <div ng-hide="loginCtrl.currentUserData().isLoggedIn" data-ng-include="'app/Views/login.html'"></div>
 
-        <div ng-if="loginCtrl.isLoggedIn()" data-ng-include="'/app/layout/shell.html'"></div>
+        <div ng-if="loginCtrl.currentUserData().isLoggedIn" data-ng-include="'/app/layout/shell.html'"></div>
 
-        <div ng-if="loginCtrl.isLoggedIn()" id="splash-page" data-ng-show="false">
+        <div ng-if="loginCtrl.currentUserData().isLoggedIn" id="splash-page" data-ng-show="false">
             <!--  <div class="page-splash">
                 <div class="page-splash-message">
                     Grades Management System loading...
@@ -52,7 +52,7 @@
 
     </div>
 
-    <!--  <span data-cc-scroll-to-top ng-if="loginCtrl.isLoggedIn()"></span>-->
+    <!--  <span data-cc-scroll-to-top ng-if="loginCtrl.currentUserData().isLoggedIn"></span>-->
 
     <!-- Vendor Scripts -->
     <script src="scripts/jquery-2.1.1.js"></script>

@@ -9,9 +9,9 @@ using Server.WebApi.Models;
 namespace Server.WebApi.Controllers
 {
     [EnableCors("http://localhost:3001", "*", "*")]
-    public class ProductsController : ApiController
+    public class GradesController : ApiController
     {
-        private readonly ProductRepository _productRepository = new ProductRepository();
+        private readonly GradesRepository _productRepository = new GradesRepository();
 
         // GET: api/Products
         [Authorize]

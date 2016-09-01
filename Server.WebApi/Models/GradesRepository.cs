@@ -10,7 +10,7 @@ namespace Server.WebApi.Models
     /// Stores the data in a json file so that no database is required for this
     /// sample application
     /// </summary>
-    public class ProductRepository
+    public class GradesRepository
     {
         /// <summary>
         /// Creates a new product with default values
