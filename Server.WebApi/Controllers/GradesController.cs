@@ -4,7 +4,7 @@ using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using System.Web.Http.OData;
-using Server.WebApi.Models;
+using Application.DAL.Models;
 
 namespace Server.WebApi.Controllers
 {
