@@ -1,3 +1,4 @@
 packages/
 Server.WebApi/obj/Debug/
 Client/obj/Debug/
+Application.DAL/obj/Debug/

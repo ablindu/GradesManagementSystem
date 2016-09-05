@@ -20,7 +20,12 @@
         .constant("appSettings",
         {
             serverpath: "http://localhost:3000"
-        });
+        }).config(configSetup);
+
+    function configSetup($locationProvider /*, $urlRouterProvider*/) {
+        $locationProvider.html5Mode(true);
+       //$urlRouterProvider.otherwise('/');
+    }
 
     //TODO to be implemented: Handle routing errors and success events
    /* app.run(['$rootScope', function ($rootScope) {
