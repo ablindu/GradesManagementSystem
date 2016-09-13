@@ -7,14 +7,15 @@
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
 
-        var vm = this;
-        vm.title = 'Admin';
+        var admin = this;
+        admin.title = 'Admin';
 
         activate();
 
         function activate() {
             common.activateController([], controllerId)
                 .then(function () { log('Activated Admin View'); });
+                
         }
     }
 })();

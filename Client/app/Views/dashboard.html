@@ -1,87 +1,72 @@
-﻿<section id="dashboard-view" class="mainbar" ng-controller="dashboardController as dashboardCtrl">
-    <section class="matter">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="today-datas">
-                        <li style="float:right;" class="blightblue">
-                            <div class="pull-left"><i class="fa fa-calendar"></i></div>
-                            <div class="datas-text pull-right">
-                                <span class="bold">{{dashboardCtrl.dateNow}}</span> Today's date
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>
-                       <!-- <li class="borange">
-                            <div class="pull-left"><i class="fa fa-envelope"></i></div>
-                            <div class="datas-text pull-right">
-                                <span class="bold">{{dashboardCtrl.messageCount}}</span> Messages
-                            </div>
-                            <div class="clearfix"></div>
-                        </li>-->
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <div ng-repeat="p in dashboardCtrl.classes" class="widget wgreen">
-                        <div title='{{p.name}}' data-cc-widget-header allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <table class="table table-condensed table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>W1</th>
-                                        <th>W2</th>
-                                        <th>W3</th>
-                                        <th>W4</th>
-                                        <th>W5</th>
-                                        <th>W6</th>
-                                        <th>W7</th>
-                                        <th>W8</th>
-                                        <th>W9</th>
-                                        <th>W10</th>
-                                        <th>W11</th>
-                                        <th>W12</th>
-                                        <th>W13</th>
-                                        <th>W14</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr data-ng-repeat="p in dashboardCtrl.people">
-                                        <td>{{p.w1}}</td>
-                                        <td>{{p.w2}}</td>
-                                        <td>{{p.w3}}</td>
-                                        <td>{{p.w4}}</td>
-                                        <td>{{p.w5}}</td>
-                                        <td>{{p.w6}}</td>
-                                        <td>{{p.w7}}</td>
-                                        <td>{{p.w8}}</td>
-                                        <td>{{p.w9}}</td>
-                                        <td>{{p.w10}}</td>
-                                        <td>{{p.w11}}</td>
-                                        <td>{{p.w12}}</td>
-                                        <td>{{p.w13}}</td>
-                                        <td>{{p.w13}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="widget-foot">
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-               <!-- <div class="col-md-6">
-                    <div class="widget wgreen">
-                        <div data-cc-widget-header title="{{dashboardCtrl.news.title}}" allow-collapse="true"></div>
-                        <div class="widget-content text-center text-info">
-                            <small>{{dashboardCtrl.news.description}}</small>
-                        </div>
-                        <div class="widget-foot">
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>-->
-            </div>
+﻿<section ng-controller="dashboardController as dashboard">
+    <div class="col-md-8">
+        <label ng-bind="dashboard.selectedOption"></label>
+        <div class="text-center text-info table-responsive">
+            <table class="table table-condensed table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            <select class="form-control" name="repeatSelect" id="repeatSelect" 
+                                    ng-model="dashboard.selectedOption"
+                                    ng-change="dashboard.updateGradesTable()">
+                                <option value=""  selected>Select course</option>
+                                <option ng-repeat="option in dashboard.classes" 
+                                         value="{{option.id}}">{{option.name}}</option>
+                            </select>
+                        </th>
+                        <th>W1</th>
+                        <th>W2</th>
+                        <th>W3</th>
+                        <th>W4</th>
+                        <th>W5</th>
+                        <th>W6</th>
+                        <th>W7</th>
+                        <th>W8</th>
+                        <th>W9</th>
+                        <th>W10</th>
+                        <th>W11</th>
+                        <th>W12</th>
+                        <th>W13</th>
+                        <th>W14</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="p in dashboard.people">
+                        <th scope="row">Marks</td>
+                            <td>{{p.w1}}</td>
+                            <td>{{p.w2}}</td>
+                            <td>{{p.w3}}</td>
+                            <td>{{p.w4}}</td>
+                            <td>{{p.w5}}</td>
+                            <td>{{p.w6}}</td>
+                            <td>{{p.w7}}</td>
+                            <td>{{p.w8}}</td>
+                            <td>{{p.w9}}</td>
+                            <td>{{p.w10}}</td>
+                            <td>{{p.w11}}</td>
+                            <td>{{p.w12}}</td>
+                            <td>{{p.w13}}</td>
+                            <td>{{p.w13}}</td>
+                    </tr>
+                    <tr data-ng-repeat="p in dashboard.people">
+                        <th scope="row">Attendances</td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                            <td><input type="checkbox" checked="true" /></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </section>
+    </div>
 </section>

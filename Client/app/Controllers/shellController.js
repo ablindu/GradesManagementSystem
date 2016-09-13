@@ -24,15 +24,15 @@
             color: '#F58A00'
         };
 
-        //activate();
+        activate();
 
-        /*function activate() {
-            logSuccess('Hot Towel Angular loaded!', null, true);
-            common.activateController([], controllerId);
-        }*/
+        function activate() {
+           // logSuccess('Hot Towel Angular loaded!', null, true);
+            //common.activateController([], controllerId);
+            userService.loadAuthUserDataIfToken();
+        }
 
         function toggleSpinner(on) { vm.isBusy = on; }
-
         $rootScope.$on('$stateChangeSuccess', function () {
             if (userService.getProfile().isLoggedIn && $state.current.name === "login") {
                 $state.go('home');

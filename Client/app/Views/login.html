@@ -10,9 +10,10 @@
             <input ng-model="loginCtrl.userData.password" type="password" id="inputPassword" class="form-control" placeholder="Password"
                 required>
             <div id="remember" class="checkbox">
-                <label>
-                        <input id="rememberMe"  ng-click="loginCtrl.triggerRememberMeCheckbox()"  type="checkbox" /> <!--value="remember-me"-->
-                        <em style="padding-left: 16px;"> I'm Awesome, Remember Me!</em>
+                <label style="margin-left: 10px;">
+                  <input id="rememberMe" ng-checked="loginCtrl.userData.isChecked" ng-click="loginCtrl.triggerRememberMeCheckbox()" type="checkbox" />
+                    <!--value="remember-me"-->
+                    <small> <i>I'm Awesome, Remember Me!</i></small>
                 </label>
             </div>
             <button ng-click="loginCtrl.login()" class="cust-btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>

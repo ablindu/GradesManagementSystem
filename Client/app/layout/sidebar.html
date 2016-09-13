@@ -1,15 +1,19 @@
-﻿<div data-cc-sidebar>
-    <div class="sidebar-filler"></div>
-    <div class="sidebar-dropdown"><a href="#">Menu</a></div>
-    <div class="sidebar-inner">
-        <div class="sidebar-widget"></div>
-        <ul class="navi">
-            <li ui-sref-active="current" class="nlightblue">
-                <a ui-sref="home">Home</a>
-            </li>
-            <li ui-sref-active="current" class="nlightblue">
-                <a ui-sref="admin"  >Admin</a>
-            </li>
-        </ul>
-    </div>
+﻿<!-- Sidebar Menu Items -->
+<div data-cc-sidebar class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav side-nav">
+        <li ui-sref-active="active">
+            <a ui-sref="home"><i class="fa fa-fw fa-home"></i> Home</a>
+        </li>
+        <li ui-sref-active="active">
+            <a ui-sref="admin" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> First year[admin] <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="demo" class="collapse">
+                <li>
+                    <a href="#">First semester</a>
+                </li>
+                <li>
+                    <a href="#">Second Semester</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
 </div>

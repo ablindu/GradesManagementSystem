@@ -1,17 +1,15 @@
-﻿<div data-ng-controller="shellController as vm">
-    <header class="clearfix">
-        <div data-ng-include="'/app/layout/topnav.html'"></div>
-    </header>
-    <section id="content" class="content">
-         <div data-ng-show="vm.isBusy" class="page-splash dissolve-animation">
+﻿<div class="clearfix" data-ng-controller="shellController as vm" id="wrapper">
+    <header data-ng-include="'/app/layout/topnav.html'"></header>
+
+    <div>
+        <!--<div data-ng-show="vm.isBusy" class="page-splash dissolve-animation">
             <div data-cc-spinner="vm.spinnerOptions"></div>
             <div class="page-splash-message page-splash-message-subtle">{{vm.busyMessage}}</div>
-        </div>
+        </div>-->
 
-        <div data-ng-include="'/app/layout/sidebar.html'"></div>
-        <div ui-view>
-            <!--DISPLAY THE MAIN VIEW-->
-        </div>
+        <nav data-ng-include="'/app/layout/sidebar.html'" class="navbar-inverse" role="navigation"></nav>
+        <div ui-view></div>
+
         <div data-ng-view class="shuffle-animation"></div>
     </section>
 </div>

@@ -16,21 +16,19 @@
 
         // 3rd Party Modules
         'ui.bootstrap'      // ui-bootstrap (ex: carousel, pagination, dialog)
-    ])
-        .constant("appSettings",
+    ]).constant("appSettings",
         {
             serverpath: "http://localhost:3000"
         }).config(configSetup);
 
-    function configSetup($locationProvider /*, $urlRouterProvider*/) {
+    function configSetup($locationProvider) {
         $locationProvider.html5Mode(true);
-       //$urlRouterProvider.otherwise('/');
     }
 
     //TODO to be implemented: Handle routing errors and success events
-   /* app.run(['$rootScope', function ($rootScope) {
-         $rootScope.$on('$stateChangeSuccess', function ( ) {
-                alert("test");
-            });
-    }]);*/
+    /* app.run(['$rootScope', function ($rootScope) {
+          $rootScope.$on('$stateChangeSuccess', function ( ) {
+                 alert("test");
+             });
+     }]);*/
 })();

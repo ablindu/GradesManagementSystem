@@ -19,16 +19,19 @@
             getProfile = function () {
                 return profile;
             },
-            markUserAsLoggedInIfTokenStored = function () {
+            loadAuthUserDataIfToken = function () {
                 if (localStorage.getItem("PROFILE_TOKEN")) {
                     getProfile().isLoggedIn = true;
+                    getProfile().token = localStorage.getItem("PROFILE_TOKEN");
+                    getProfile().userName = localStorage.getItem("PROFILE_USERNAME");
+
                 }
             },
             setUserOnLocalStorage = function (userData) {
                 if (!supportsHTML5Storage()) { return false; }
                 localStorage.setItem("PROFILE_IMG_SRC", "../../Content/images/avatarSucess.png?sz=120");
                 localStorage.setItem("PROFILE_REAUTH_EMAIL", userData.email);
-                localStorage.setItem("PROFILE_IS_CHECKED", userData.isChecked);
+               // localStorage.setItem("PROFILE_IS_CHECKED", userData.isChecked);
                 localStorage.setItem("PROFILE_USERNAME", userData.userName);
             },
             removeUserFromLocalStorage = function () {
@@ -41,10 +44,6 @@
                     isLoggedIn: false,
                     userName: "",
                     email: "",
-                    // password: "",
-                    // confirmPassword: "",
-                    // isChecked: false,
-                    // profileImg: "../../Content/images/avatar_2x.png"
                 };
 
             },
@@ -55,11 +54,12 @@
                     return false;
                 }
             }
+           
 
         return {
             setProfile: setProfile,
             getProfile: getProfile,
-            markUserAsLoggedInIfTokenStored: markUserAsLoggedInIfTokenStored,
+            loadAuthUserDataIfToken: loadAuthUserDataIfToken,
             setUserOnLocalStorage: setUserOnLocalStorage,
             removeUserFromLocalStorage: removeUserFromLocalStorage
         };

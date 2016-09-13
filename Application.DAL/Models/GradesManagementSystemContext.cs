@@ -1,5 +1,4 @@
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using Application.DAL.Models.Mapping;
 
 namespace Application.DAL.Models
@@ -20,6 +19,10 @@ namespace Application.DAL.Models
         public DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<Attendance> Attendances { get; set; }
+        public virtual DbSet<Course> Courses { get; set; }
+        public virtual DbSet<Grade> Grades { get; set; }
+        public virtual DbSet<Department> Departments { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

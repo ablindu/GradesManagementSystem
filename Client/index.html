@@ -29,31 +29,28 @@
     <link href="content/bootstrap.min.css" rel="stylesheet" />
     <link href="content/font-awesome.min.css" rel="stylesheet" />
     <link href="content/toastr.css" rel="stylesheet" />
-    <link href="content/customtheme.css" rel="stylesheet">
+    <link href="content/angular-csp.css" rel="stylesheet" />
     <link href="content/styles.css" rel="stylesheet" />
+    <!-- <link href="content/customtheme.css" rel="stylesheet">   -->
 </head>
 
 <body data-ng-controller='loginController as loginCtrl'>
-    <div>
-        <div ng-hide="loginCtrl.currentUserData().isLoggedIn" data-ng-include="'app/Views/login.html'"></div>
+    <div ng-cloak>
+        <div ng-cloak ng-hide="loginCtrl.currentUserData().isLoggedIn" data-ng-include="'app/Views/login.html'"></div>
+        <div ng-cloak ng-if="loginCtrl.currentUserData().isLoggedIn" data-ng-include="'/app/layout/shell.html'"></div>
 
-        <div ng-if="loginCtrl.currentUserData().isLoggedIn" data-ng-include="'/app/layout/shell.html'"></div>
-
-        <div ng-if="loginCtrl.currentUserData().isLoggedIn" id="splash-page" data-ng-show="false">
-            <!--  <div class="page-splash">
-                <div class="page-splash-message">
-                    Grades Management System loading...
-                </div>
-                <div class="progress progress-striped active page-progress-bar">
-                    <div class="bar"></div>
-                </div>
-            </div>-->
+        <!--<div id="splash-page" data-ng-show="false">
+    <div class="page-splash">
+        <div class="page-splash-message">
+            Grades Management System loading...
         </div>
-
+        <div class="progress progress-striped active page-progress-bar">
+            <div class="bar"></div>
+        </div>
+    </div>-->
     </div>
 
-    <!--  <span data-cc-scroll-to-top ng-if="loginCtrl.currentUserData().isLoggedIn"></span>-->
-
+    </div>
     <!-- Vendor Scripts -->
     <script src="scripts/jquery-2.1.1.js"></script>
     <script src="scripts/angular.js"></script>
@@ -96,6 +93,7 @@
     <script src="app/Services/authorizationService.js"></script>
     <script src="app/Services/userService.js"></script>
     <script src="app/Services/loginService.js"></script>
+    <script src="app/Services/dashboardService.js"></script>
 </body>
 
 </html>

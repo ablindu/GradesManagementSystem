@@ -8,6 +8,8 @@ using Server.WebApi.Models;
 
 namespace Server.WebApi.Controllers
 {
+    [Authorize]
+    [RoutePrefix("api/Grades")]
     [EnableCors("http://localhost:3001", "*", "*")]
     public class GradesController : ApiController
     {

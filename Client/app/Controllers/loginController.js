@@ -7,19 +7,18 @@
 
     function loginController($cookies, $state, userService, loginService, authorizationService) {
         var vm = this;
-        userService.markUserAsLoggedInIfTokenStored();
-
-
         vm.message = "";
         vm.userData = {
             userName: "",
             email: "",
             password: "",
             confirmPassword: "",
-            isChecked: true,
-            profileImg: "../../Content/images/avatar_2x.png"
+            isChecked: false,
+            profileImg: "../../Content/images/avatar_2x.png",
         };
         console.log("isChecked " + vm.userData.isChecked);
+        
+
         vm.currentUserData = function () {
             var userData = userService.getProfile();
             return userData;
@@ -29,8 +28,11 @@
             if (localStorage.getItem("PROFILE_REAUTH_EMAIL")) {
                 vm.userData.profileImg = localStorage.getItem("PROFILE_IMG_SRC");
                 vm.userData.email = localStorage.getItem("PROFILE_REAUTH_EMAIL");
-                vm.userData.isChecked = localStorage.getItem("PROFILE_IS_CHECKED");
                 vm.userData.userName = localStorage.getItem("PROFILE_USERNAME");
+
+                if(localStorage.getItem("PROFILE_IS_CHECKED")){
+                vm.userData.isChecked = localStorage.getItem("PROFILE_IS_CHECKED");
+                }
                 return true;
             }
             return false;
@@ -65,13 +67,13 @@
                 function (onSuccessData) {
                     vm.message = "";
                     vm.userData.password = "";
-                    debugger;
-                    vm.userData.isChecked = vm.userData.isChecked;
+                    
                     userService.setProfile(onSuccessData.userName, onSuccessData.access_token);
                     if (vm.userData.isChecked) {
                         userService.setUserOnLocalStorage(vm.userData);
                     }
                     authorizationService.setToken(onSuccessData.access_token);
+                    debugger;
                     $state.go('home');
                 },
                 function (errorResponse) {
@@ -86,22 +88,32 @@
         vm.logout = function () {
             authorizationService.cleanToken();
             userService.getProfile().isLoggedIn = false;
-            if (!vm.userData.isChecked) {
+            vm.userData.email = "";
+            if (!localStorage.getItem('PROFILE_IS_CHECKED')) {
                 vm.removeUserFromLocalStorage();
             }
             $state.go('login');
         };
         vm.triggerRememberMeCheckbox = function () {
-debugger;
-            if (document.getElementById("rememberMe").value) {
-                vm.userData.isChecked = true;
-            } else {
-                vm.userData.isChecked = false;
+
+            if (localStorage.getItem('PROFILE_IS_CHECKED')) 
+            {
+                localStorage.removeItem('PROFILE_IS_CHECKED')
+            }
+            else {
+                localStorage.setItem('PROFILE_IS_CHECKED', true);
+                vm.userData.isChecked = localStorage.getItem('PROFILE_IS_CHECKED');
             }
         };
         vm.removeUserFromLocalStorage = function () {
             userService.removeUserFromLocalStorage();
         };
-        vm.isUserSavedInLocalSt();
+
+        activate();
+        function activate(){
+            vm.isUserSavedInLocalSt();
+            userService.loadAuthUserDataIfToken();
+        }
+        
     }
 })();
