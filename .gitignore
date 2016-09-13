@@ -1,6 +1,8 @@
 packages/
-Server.WebApi/obj/Debug/
-Client/obj/Debug/
-Application.DAL/obj/Debug/
+Client/obj/
+Client/bin/
+Application.DAL/obj/
 Application.DAL/bin/
+Server.WebApi/bin/
+Server.WebApi/obj/
 Client/.vscode/
