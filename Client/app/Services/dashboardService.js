@@ -25,6 +25,24 @@
                         method:'PUT',
                         headers: { 'Authorization': token}
                     }*/
+                }),
+            grades: $resource(appSettings.serverpath + '/api/Grades/GetGradesByCourse',
+                { courseId: '@courseId' },
+                {
+                    'getCourseForYear': {
+                        method: 'GET',
+                        isArray: true,
+                        headers: { 'Authorization': token }
+                    }
+                }),
+            attendances: $resource(appSettings.serverpath + '/api/Attendance/GetAttendancesByCourse',
+                { courseId: '@courseId' },
+                {
+                    'getAttendancesForCourse': {
+                        method: 'GET',
+                        isArray: true,
+                        headers: { 'Authorization': token }
+                    }
                 })
         }
     }

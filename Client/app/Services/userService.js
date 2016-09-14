@@ -47,6 +47,14 @@
                 };
 
             },
+            invalidateUserTokenSession = function(){
+                localStorage.removeItem("PROFILE_TOKEN");
+                 profile = {
+                    isLoggedIn: false,
+                    userName: "",
+                    email: "",
+                };
+            },
             supportsHTML5Storage = function () {
                 try {
                     return 'localStorage' in window && window['localStorage'] !== null;
@@ -61,7 +69,8 @@
             getProfile: getProfile,
             loadAuthUserDataIfToken: loadAuthUserDataIfToken,
             setUserOnLocalStorage: setUserOnLocalStorage,
-            removeUserFromLocalStorage: removeUserFromLocalStorage
+            removeUserFromLocalStorage: removeUserFromLocalStorage,
+            invalidateUserTokenSession:invalidateUserTokenSession
         };
     }
 })();

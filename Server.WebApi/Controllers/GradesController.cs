@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using System.Web.Http.OData;
-using Server.WebApi.Models;
+using Application.DAL.Models;
+using Application.DAL.Repository.Interfaces;
 
 namespace Server.WebApi.Controllers
 {
@@ -13,17 +13,16 @@ namespace Server.WebApi.Controllers
     [EnableCors("http://localhost:3001", "*", "*")]
     public class GradesController : ApiController
     {
-        private readonly GradesRepository _productRepository = new GradesRepository();
+        private readonly IGradesRepository _gradesRepository;
 
-        // GET: api/Products
         [Authorize]
         [EnableQuery]
-        [ResponseType(typeof(Product))]
-        public IHttpActionResult Get()
+        [ResponseType(typeof(Grade))]
+        public IHttpActionResult GetGradesForCourse(int courseid, string userId)
         {
             try
             {
-                return Ok(_productRepository.Retrieve().AsQueryable());
+                return Ok(_gradesRepository.GetGradesByCourse(courseid, userId));
             }
             catch (Exception e)
             {
@@ -31,35 +30,8 @@ namespace Server.WebApi.Controllers
             }
         }
 
-        // GET: api/Products/5
-        [Authorize]
-        [ResponseType(typeof(Product))]
-        public IHttpActionResult Get(int id)
-        {
-            try
-            {
-                Product product;
-                if (id > 0)
-                {
-                    product = _productRepository.Retrieve().FirstOrDefault(p => p.ProductId == id);
-                    if (product == null)
-                    {
-                        return NotFound();
-                    }
-                }
-                else
-                {
-                    product = _productRepository.Create();
-                }
-                return Ok(product);
-            }
-            catch (Exception e)
-            {
-                return InternalServerError(e);
-            }
-
-        }
-
+        
+/*
         // POST: api/Products
         [Authorize]
         [ResponseType(typeof(Product))]
@@ -116,12 +88,12 @@ namespace Server.WebApi.Controllers
                 return InternalServerError(e);
             }
             /* var msg = new HttpResponseMessage(HttpStatusCode.Unauthorized) { ReasonPhrase = "Oops!!!" };
-             throw new HttpResponseException(msg);*/
+             throw new HttpResponseException(msg);#1#
         }
 
         // DELETE: api/Products/5
         public void Delete(int id)
         {
-        }
+        }*/
     }
 }

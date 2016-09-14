@@ -11,10 +11,21 @@
         },
             setToken = function (token) {
                 localStorage.setItem("PROFILE_TOKEN", token);
-        }
+            },
+
+            isAuthenticated = function () {
+                if (localStorage.getItem("PROFILE_TOKEN") !== '')
+                    return true;
+                return false;
+            }
+
+
+
         return {
             cleanToken: cleanToken,
-            setToken: setToken
+            setToken: setToken,
+            isAuthenticated: isAuthenticated
         }
+
     };
 })();

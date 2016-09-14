@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using Application.DAL.Models;
+
 namespace Application.DAL.Repository.Interfaces
 {
-    public interface IGradesRepository
+    public interface IAttendanceRepository
     {
-        IEnumerable<Grade> GetGradesByCourse(int courseId, string userId);
+        IEnumerable<Attendance> GetAttendancesByCourse(int courseId);
+    
     }
 }

@@ -4,7 +4,7 @@
     var controllerId = 'shellController';
     angular.module('app')
         .controller(controllerId,
-        ['$rootScope','$state', 'common', 'config', 'userService', shellController]);
+        ['$rootScope', '$state', 'common', 'config', 'userService', shellController]);
 
     function shellController($rootScope, $state, common, config, userService) {
         var vm = this;
@@ -27,23 +27,17 @@
         activate();
 
         function activate() {
-           // logSuccess('Hot Towel Angular loaded!', null, true);
+            // logSuccess('Hot Towel Angular loaded!', null, true);
             //common.activateController([], controllerId);
             userService.loadAuthUserDataIfToken();
         }
 
         function toggleSpinner(on) { vm.isBusy = on; }
-        $rootScope.$on('$stateChangeSuccess', function () {
-            if (userService.getProfile().isLoggedIn && $state.current.name === "login") {
-                $state.go('home');
-            }
-        });
+
 
         $rootScope.$on('$routeChangeStart',
             function (event, next, current) { toggleSpinner(true); }
-
         );
-
         $rootScope.$on(events.controllerActivateSuccess,
             function (data) { toggleSpinner(false); }
         );
@@ -51,5 +45,16 @@
         $rootScope.$on(events.spinnerToggle,
             function (data) { toggleSpinner(data.show); }
         );
+
+        $rootScope.$on('$stateChangeSuccess', function () {
+            if (userService.getProfile().isLoggedIn && $state.current.name === "login") {
+                $state.go('home');
+            }
+        });
+        $rootScope.$on("$stateChangeError", function (event, toState, toParams, fromState, fromParams, error) {
+            debugger;
+            userService.invalidateUserTokenSession();
+            $state.go("login");
+        });
     };
 })();
